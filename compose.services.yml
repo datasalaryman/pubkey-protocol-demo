@@ -9,17 +9,3 @@ services:
       POSTGRES_PASSWORD: pubkey-protocol-demo
     volumes:
       - ./tmp/postgres:/var/lib/postgresql/data
-    networks:
-      - stack
-  pubkey-protocol-demo-web:
-    depends_on: 
-      - postgres
-    build: .
-    ports:
-      - 3000:3000
-    env_file: .env
-    networks:
-      - stack
-
-networks:
-  stack:
