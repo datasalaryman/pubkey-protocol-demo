@@ -5,7 +5,7 @@
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
-    "dev:services": "docker-compose up",
+    "dev:services": "docker-compose up -d",
     "docker:build": "docker build -t pubkey-protocol-demo-web:latest .",
     "docker:run": "docker run --rm --name pubkey-protocol-demo-web -p 3000:3000 --env-file apps/web/.env pubkey-protocol-demo-web:latest",
     "setup": "pnpm prisma migrate deploy && pnpm prisma db push",
