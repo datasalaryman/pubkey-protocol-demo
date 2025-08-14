@@ -97,10 +97,9 @@ pnpm start
 
 You can build and run the application using Docker:
 
-```bash
-# Build the Docker image
-pnpm docker:build
+Ensure your DATABASE_URL is set to `postgresql://pubkey-protocol-demo:pubkey-protocol-demo@postgres:5432/pubkey-protocol-demo?schema=public` in your .env file or it will not work.
 
+```bash
 # Run the Docker container
 pnpm docker:run
 ```
