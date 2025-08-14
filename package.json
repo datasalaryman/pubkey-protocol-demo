@@ -5,9 +5,8 @@
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
-    "dev:services": "docker-compose up -d",
-    "docker:build": "docker build -t pubkey-protocol-demo-web:latest .",
-    "docker:run": "docker run --rm --name pubkey-protocol-demo-web -p 3000:3000 --env-file apps/web/.env pubkey-protocol-demo-web:latest",
+    "dev:services": "docker-compose -f compose.services.yml up -d",
+    "docker:run": "docker-compose up -d",
     "setup": "pnpm prisma migrate deploy && pnpm prisma db push",
     "start": "prisma migrate deploy && prisma generate && react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
@@ -53,10 +52,10 @@
     "remix-auth-oauth2": "^3.4.1",
     "remix-themes": "^2.0.4",
     "zod": "^3.25.67",
-    "zod-prisma-types": "^3.2.4"
+    "zod-prisma-types": "^3.2.4",
+    "@react-router/dev": "^7.6.2"
   },
   "devDependencies": {
-    "@react-router/dev": "^7.6.2",
     "@types/node": "^24.0.3",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
