@@ -66,7 +66,7 @@ This will start a Postgres database using Docker Compose.
 ### 5. Run the setup script to create the database and tables
 
 ```bash
-pnpm setup
+pnpm run setup
 ```
 
 ### 6. Run the application in development mode
