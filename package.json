@@ -7,7 +7,7 @@
     "dev": "react-router dev",
     "dev:services": "docker-compose up -d",
     "docker:build": "docker build -t pubkey-protocol-demo-web:latest .",
-    "docker:run": "docker run --rm --name pubkey-protocol-demo-web -p 3000:3000 --env-file .env pubkey-protocol-demo-web:latest",
+    "docker:run": "docker run --rm --name pubkey-protocol-demo-web -p 3000:3000 --env-file .env --network=host pubkey-protocol-demo-web:latest",
     "setup": "pnpm prisma migrate deploy && pnpm prisma db push",
     "start": "prisma migrate deploy && prisma generate && react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
